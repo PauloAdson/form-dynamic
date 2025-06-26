@@ -120,6 +120,7 @@ Em vez de usar a função `mail()` nativa do PHP, que frequentemente resulta em 
 ```json
 {
   "formId": "cadastro_usuario",
+  "theme": "card-default",
   "title": "Cadastro de Usuário",
   "description": "Formulário para novos usuários",
   "published": true,
@@ -226,19 +227,24 @@ Em vez de usar a função `mail()` nativa do PHP, que frequentemente resulta em 
 
 ```json
 {
+  "formId": "cotacao_materiais_de_construcao",
+  "theme": "cotation-v1",
   "title": "Cotação de materiais de construção",
+  "description": "Envie o seu orçamento",
+  "published": true,
+  "slug": "a8dcf31a226a8b79",
   "components": [
     // --- Seção de formulário normal ---
     { "type": "textfield", "key": "loja_nome", "label": "Nome da loja" },
     {
-      "type": "number",
-      "key": "telefone_contato",
-      "label": "Telefone de contato"
-    },
-    {
       "type": "email",
       "key": "email",
       "label": "E-mail"
+    },
+    {
+      "type": "number",
+      "key": "telefone_contato",
+      "label": "Telefone de contato"
     },
 
     // --- Grupo com estilo para cotação ---
@@ -252,7 +258,8 @@ Em vez de usar a função `mail()` nativa do PHP, que frequentemente resulta em 
         {
           "type": "textfield",
           "key": "item_produto",
-          "label": "Produto",
+          "label": "Tijolo",
+          "placeholder": "Modelo do tijolo",
           "validations": {
             "required": true,
             "errorMessage": {
@@ -335,6 +342,7 @@ O sistema de formulários suporta os seguintes tipos de componentes:
 ### Propriedades importantes
 
 - `formId`: id do formulário, deve ser único.
+- `theme`: Define o tema geral do formulário. Por exemplo, se vai ocupar maior parte da tela ou não.
 - `title`: Título do formulário.
 - `description`: Descrição do formulário.
 - `published`: o published define se o formulário vai estar disponível para o usuário ou não | `true` ou `false`.
