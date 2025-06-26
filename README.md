@@ -325,7 +325,7 @@ O sistema de formulários suporta os seguintes tipos de componentes:
 >   - `repeatable`: se for `true`, vai aparecer um botão onde será possível adicionar um novo campo igual.
 >   - `layout`: caso o valor seja por exemplo `"table"`, o layout do grupo vai mudar para o de uma tabela.
 
-- `file`: Para upload de arquivos, um requisito muito comum.
+<!-- - `file`: Para upload de arquivos, um requisito muito comum. -->
 - `section`: separador visual, sem entrada de dados.
 - `button`: botão de ação (ex: enviar).
 
