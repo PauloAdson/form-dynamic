@@ -170,6 +170,7 @@ Em vez de usar a função `mail()` nativa do PHP, que frequentemente resulta em 
       "type": "select",
       "key": "estado",
       "label": "Estado",
+      "placeholder": "Selecione seu estado",
       "input": true,
       "validations": {
         "required": true,
@@ -325,7 +326,7 @@ O sistema de formulários suporta os seguintes tipos de componentes:
 >   - `repeatable`: se for `true`, vai aparecer um botão onde será possível adicionar um novo campo igual.
 >   - `layout`: caso o valor seja por exemplo `"table"`, o layout do grupo vai mudar para o de uma tabela.
 
-<!-- - `file`: Para upload de arquivos, um requisito muito comum. -->
+- `file`: Para upload de arquivos, um requisito muito comum.
 - `section`: separador visual, sem entrada de dados.
 - `button`: botão de ação (ex: enviar).
 
@@ -339,6 +340,8 @@ O sistema de formulários suporta os seguintes tipos de componentes:
 - `published`: o published define se o formulário vai estar disponível para o usuário ou não | `true` ou `false`.
 - `slug`: A slug será um hash aleátorio utilizando bin2hex. Valor único.
 - `key`: A key é o identificador único de cada campo dentro de um formulário. Ela é usada para identificar o campo na renderização e para nomear o dado na submissão.
+- `label`: Define o que vai aparecer no label de cada campo do formulário.
+- `input`: O `input` `true` indica que aquele componente específico é um campo que coleta dados do usuário e que seu valor deve ser incluído no objeto JSON final da submissão.
 
 **_Regras:_**
 
